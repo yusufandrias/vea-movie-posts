@@ -14,8 +14,8 @@
  *
  * @wordpress-plugin
  * Plugin Name:       VEA Movie Posts
- * Plugin URI:        https://github.com
- * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
+ * Plugin URI:        https://github.com/yusufandrias/vea-movie-posts
+ * Description:       Plugin untuk menambahkan post ber-type movie. plugin dibuat dari https://generatewp.com/
  * Version:           1.0.0
  * Author:            Yusuf Andrias
  * Author URI:        http://yusufandrias.com
