@@ -82,14 +82,14 @@ function movies_post_type() {
 	);
 	register_taxonomy( $taxo_slug, array( $postType ), $args );
 
-	$wp_term = get_categories( 'taxonomy='.$taxo_slug.'&type='.$postType );
+	// $wp_term = get_categories( 'taxonomy='.$taxo_slug.'&type='.$postType );
 
-    if ( $wp_term ) {
-        foreach ( $wp_term as $term ) {
-            // add_submenu_page( string $parent_slug, string $page_title, string $menu_title, string $capability, string $menu_slug,                                                  callable $function = '' )
-            add_submenu_page(    'edit.php?post_type='.$postType,      $term->name,        $term->name,        'manage_options',   'edit.php?post_type='.$postType.'&'.$taxo_slug.'='.$term->slug, ''); 
-        }
-    }
+    // if ( $wp_term ) {
+    //     foreach ( $wp_term as $term ) {
+    //         // add_submenu_page( string $parent_slug, string $page_title, string $menu_title, string $capability, string $menu_slug,                                                  callable $function = '' )
+    //         add_submenu_page(    'edit.php?post_type='.$postType,      $term->name,        $term->name,        'manage_options',   'edit.php?post_type='.$postType.'&'.$taxo_slug.'='.$term->slug, ''); 
+    //     }
+    // }
 
 
 
@@ -103,14 +103,14 @@ function movies_post_type() {
 	);
 	register_taxonomy( $taxo_slug, array( $postType ), $args );
 
-	$wp_term = get_categories( 'taxonomy='.$taxo_slug.'&type='.$postType );
+	// $wp_term = get_categories( 'taxonomy='.$taxo_slug.'&type='.$postType );
 
-    if ( $wp_term ) {
-        foreach ( $wp_term as $term ) {
-            // add_submenu_page( string $parent_slug, string $page_title, string $menu_title, string $capability, string $menu_slug,                                                  callable $function = '' )
-            add_submenu_page(    'edit.php?post_type='.$postType,      $term->name,        $term->name,        'manage_options',   'edit.php?post_type='.$postType.'&'.$taxo_slug.'='.$term->slug, ''); 
-        }
-    }
+    // if ( $wp_term ) {
+    //     foreach ( $wp_term as $term ) {
+    //         // add_submenu_page( string $parent_slug, string $page_title, string $menu_title, string $capability, string $menu_slug,                                                  callable $function = '' )
+    //         add_submenu_page(    'edit.php?post_type='.$postType,      $term->name,        $term->name,        'manage_options',   'edit.php?post_type='.$postType.'&'.$taxo_slug.'='.$term->slug, ''); 
+    //     }
+    // }
 
 
 
@@ -124,17 +124,6 @@ function movies_post_type() {
 	);
 	register_taxonomy( $taxo_slug, array( $postType ), $args );
 
-	$wp_term = get_categories( 'taxonomy='.$taxo_slug.'&type='.$postType );
-
-    if ( $wp_term ) {
-        foreach ( $wp_term as $term ) {
-            // add_submenu_page( string $parent_slug, string $page_title, string $menu_title, string $capability, string $menu_slug,                                                  callable $function = '' )
-            add_submenu_page(    'edit.php?post_type='.$postType,      $term->name,        $term->name,        'manage_options',   'edit.php?post_type='.$postType.'&'.$taxo_slug.'='.$term->slug, ''); 
-        }
-    }
-
-
-
 
     //adding actor
     $taxo_name = 'Actor';
@@ -145,17 +134,6 @@ function movies_post_type() {
 	);
 	register_taxonomy( $taxo_slug, array( $postType ), $args );
 
-	$wp_term = get_categories( 'taxonomy='.$taxo_slug.'&type='.$postType );
-
-    if ( $wp_term ) {
-        foreach ( $wp_term as $term ) {
-            // add_submenu_page( string $parent_slug, string $page_title, string $menu_title, string $capability, string $menu_slug,                                                  callable $function = '' )
-            add_submenu_page(    'edit.php?post_type='.$postType,      $term->name,        $term->name,        'manage_options',   'edit.php?post_type='.$postType.'&'.$taxo_slug.'='.$term->slug, ''); 
-        }
-    }
-
-
-
 
     //adding director
     $taxo_name = 'Director';
@@ -165,15 +143,6 @@ function movies_post_type() {
 	        'rewrite'           => array( 'slug' => $taxo_slug ),
 	);
 	register_taxonomy( $taxo_slug, array( $postType ), $args );
-
-	$wp_term = get_categories( 'taxonomy='.$taxo_slug.'&type='.$postType );
-
-    if ( $wp_term ) {
-        foreach ( $wp_term as $term ) {
-            // add_submenu_page( string $parent_slug, string $page_title, string $menu_title, string $capability, string $menu_slug,                                                  callable $function = '' )
-            add_submenu_page(    'edit.php?post_type='.$postType,      $term->name,        $term->name,        'manage_options',   'edit.php?post_type='.$postType.'&'.$taxo_slug.'='.$term->slug, ''); 
-        }
-    }
 
 
 
@@ -186,18 +155,6 @@ function movies_post_type() {
 	        'rewrite'           => array( 'slug' => $taxo_slug ),
 	);
 	register_taxonomy( $taxo_slug, array( $postType ), $args );
-
-	$wp_term = get_categories( 'taxonomy='.$taxo_slug.'&type='.$postType );
-
-    if ( $wp_term ) {
-        foreach ( $wp_term as $term ) {
-            // add_submenu_page( string $parent_slug, string $page_title, string $menu_title, string $capability, string $menu_slug,                                                  callable $function = '' )
-            add_submenu_page(    'edit.php?post_type='.$postType,      $term->name,        $term->name,        'manage_options',   'edit.php?post_type='.$postType.'&'.$taxo_slug.'='.$term->slug, ''); 
-        }
-    }
-
-
-
 
 }
 add_action( 'init', 'movies_post_type', 0 );
